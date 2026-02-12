@@ -1,0 +1,288 @@
+body {
+  background-color: #f3f3f3;
+  width: 100vw;
+  height: 100hv;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container-main{
+    position: absolute;
+    top: 0;
+    left: 350px;
+    width: 70%;
+  padding: 20px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.sidebar {
+  color: white;
+  height: 100vh;
+  transition: width 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.sidebar .open {
+  width: 250px;
+}
+
+.sidebar .collapsed {
+  width: 70px;
+}
+
+.sidebar.collapsed .icon-home,
+.sidebar.collapsed .icon-control,
+.sidebar.collapsed .icon-user {
+  margin: 0 auto;
+  display: block;
+}
+
+.sidebar.collapsed span,
+.sidebar.collapsed a {
+  display: none;
+}
+
+
+.toggle-btn {
+  background: #f3f3f3;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: -15px;
+}
+
+h3{
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: 0px;
+  font-style: normal;
+  font-size: 35px;
+  font-weight: bold;
+  color: #0d1931;
+  padding: -20px;
+  margin: 5px;
+}
+
+button .search-btn, .btn-register{
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  
+}
+
+.search-btn{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  width: 20%;
+  height: 25px;
+}
+
+.search-btn input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;               /* ocupa o espaço restante */
+  font-size: 14px;
+  color: #0B2B25;
+}
+
+
+.btn-register {
+    background-color: #0290A4;
+    width: 40%;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  background: #0D1931;
+  color: #fff;
+  margin-top: 10px;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.table-container{
+    display: flex;
+    justify-content: space-between;
+    background: #0d1931;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-top: 12px;
+}
+
+.icon-arrow {  
+  position: absolute;
+  bottom: 70px;
+  right: 0px;
+  border-radius: 50%;
+  font-size: 12px;    
+  background: #f3f3f3;
+}
+
+.icon-acess{
+  position: absolute;
+}
+
+.table-container{
+  display: flex;
+  justify-content: space-between;
+  background: #f4f4f4;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-bottom: 2px solid #ccc;
+}
+
+.table-row{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  background: #ffff;
+}
+
+.table-row{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+  border-bottom: none;
+  align-items: center;
+  background: #ffff;
+}
+
+.table-row span:first-child{
+  flex: 1;
+  font-size: 16px;
+  color: #0B2B25;
+}
+
+.table-row span:last-child{
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  visibility: visible;
+  opacity: 1;
+}
+
+.table-row button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.table-row button:hover{
+  transform: scale(1.1);
+  color: teal;
+}
+
+
+/*Vizualizar dados do usuário*/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #fff;
+  padding: 10px;
+  width: 50%;
+  height: 600px;
+  text-align: left;
+  border: none;
+  text-decoration: none;
+}
+
+.modal h5 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #0B2B25;
+  border: none;
+  text-decoration: none;
+}
+
+.modal p {
+  margin: 5px 0;
+  color: #0B2B25;
+  font-size: 18px;
+  border: none;
+  text-decoration: none;
+}
+
+.modal button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: teal;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirm {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 350px;
+  height: 250px;
+}
+
+.confirm-actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.confirm-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-actions button:first-child {
+  background: #0290A4;
+  color: white;
+}
+
+.confirm-actions button:last-child {
+  background: gray;
+  color: white;
+}
